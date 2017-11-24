@@ -1,0 +1,14 @@
+<div ng-controller="somaController">
+    <h2>Somar:</h2>
+
+    <input type="text" id="input1" class="form-control" 
+    placeholder="Digite o valor 1 aqui." ng-model="objetoGuardaAtributo.valor1"/>
+
+    <input type="text" class="form-control" 
+    placeholder="Digite o valor 2 aqui." ng-model="objetoGuardaAtributo.valor2"/>
+
+    <button id="resultadoDasOperacoes" class="btn btn-success btn-filter" 
+    ng-click="somar(objetoGuardaAtributo)"> Calcular </button>
+
+    <p>Resultado: {{resultado}}</p>
+</div>

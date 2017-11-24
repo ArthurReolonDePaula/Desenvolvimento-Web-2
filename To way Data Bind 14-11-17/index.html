@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="FazTudo">
+
+<head>
+    <title>Todo List | Angular JS</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./index.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-route.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <section class="content">
+                <h1>Two Way Data Bind</h1>
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div ng-controller="incluiNaListaController">
+                                <div class="pull-left">
+                                    <div class="form-inline" style="margin-top:13px">
+                                        <input type="text" class="form-control" id="nomeTarefa" ng-model="objetoGuardaAtributo.nome" placeholder="Nome da Tarefa" />
+                                        <input type="text" class="form-control" id="statusTarefa" ng-model="objetoGuardaAtributo.status" placeholder="Status da Tarefa" />
+                                        <input type="text" class="form-control" id="descricaoTarefa" ng-model="objetoGuardaAtributo.descricao" placeholder="Descrião da Tarefa" />
+                                        <div>
+                                            <p> Digitando em NOME da tarefa: {{objetoGuardaAtributo.nome}}</p>
+                                            <p> Digitando em STATUS da tarefa: {{objetoGuardaAtributo.status}}</p>
+                                            <p> Digitando em DESCRIÇÃO da tarefa: {{objetoGuardaAtributo.descricao}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="pull-right" id="botoes">
+                                    <div class="btn-group">
+                                        <button class="btn btn-primary" ng-click="incluirInfo(objetoGuardaAtributo)">Incluir</button>
+                                        <a href="#!listar" class="btn btn-success btn-filter">Listar</a>
+                                        <a href="#!todos" class="btn btn-danger btn-filter">Home</a>
+                                    </div>
+                                </div>
+                            <div class="table-container" ng-view>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="content-footer">
+                        <p>
+                            Page © - 2017 <br> Powered By Fundatec
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script src="app.js"></script>
+    <script src="inclusaoController.js"></script>
+    <script src="lista.js"></script>
+</body>
+
+</html>

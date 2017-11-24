@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="Calcular">
+
+<head>
+    <title>Todo List | Angular JS</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./index.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-route.min.js"></script>
+
+</head>
+
+<body ng-controller="chooseController">
+    <div class="container">
+        <div class="row">
+            <section class="content">
+                <h1>Calculadora</h1>
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div>
+                                <div class="pull-left">
+                                    <div class="form-inline" style="margin-top:13px">
+                                        <input type="text" class="form-control" id="valor1" placeholder="Digite o valor 1" ng-model="calcular.valor1"/>
+                                        <input type="text" class="form-control" id="valor2" placeholder="Digite o valor 2" ng-model="calcular.valor2"/>
+                                    </div>
+                                </div>
+                                <div class="pull-right">
+                                    <div class="btn-group">
+                                        <button class="btn btn-primary" ng-click="eventoSoma(calcular)">Somar</button>
+                                        <button class="btn btn-warning" ng-click="eventoSubtracao(calcular)">Subtrair</button>
+                                        <button class="btn btn-success" ng-click="eventoDivisao(calcular)">Dividir</button>
+                                        <button class="btn btn-danger"  ng-click="eventoMultiplicacao(calcular)">Multiplicar</button>
+                                    </div>
+                                        <div
+                                            <p id="paragrafoResultado">Resultado da conta: {{resultado}}
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-footer">
+                        <p>
+                            Page © - 2017 <br> Powered By Fundatec
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    
+    <script src="chooseController.js"></script>
+</body>
+
+</html>
