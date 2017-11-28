@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+	<html lang="en" ng-app="TodasAsFuncoes">
+
+	<head>
+		<title>Todo List  | Angular JS</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">		
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+		<link href="./index.css" rel="stylesheet">
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+		 crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-route.min.js"></script>
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="row">
+				<section class="content">
+					<h1>Exercicio DW2 16-11-17</h1>
+					<div class="col-md-8 col-md-offset-2">
+						<div class="panel panel-default">
+							<div class="panel-body" ng-controller="inclusaoController">
+									<div>
+										<input type="text" class="form-control" placeholder="Digite a descrição aqui." ng-model="objetoGuardaAtributo.descricao">
+										<input type="text" class="form-control" placeholder="Digite o status aqui." ng-model="objetoGuardaAtributo.status">						
+									</div>
+								<div class="pull-right" id="botoes">
+									<div class="btn btn-default btn-flter">
+										<button class="btn btn-primary btn-filter" ng-click="incluirInfo(objetoGuardaAtributo)">Incluir</button> 
+										<a href="#!excluir" class="btn btn-success btn-filter">Excluidos</a>
+										<a href="#!pendente" class="btn btn-warning btn-filter">Pendentes</a>
+										<a href="#!cancelado" class="btn btn-danger btn-filter">Cancelados</a>
+										<a href="#!todos" class="btn btn-default btn-filter">Todos</a>
+									</div>
+								</div>
+								
+								<div class="table-container" ng-view>
+								
+								</div>
+							</div>
+						</div>
+						<div class="content-footer">
+							<p>
+								Page © - 2017 <br> Powered By Fundatec
+							</p>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+		<script src="app.js"></script>
+		<script src="inclusaoController.js"></script>
+		<script src ="exclusaoController.js"></script>
+		<script src ="pendenteController.js"></script>
+		<script src ="cancelaController.js"></script>
+		<script src="todosController.js"></script>
+		</body>
+	</html>
+
